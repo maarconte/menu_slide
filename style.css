@@ -1,0 +1,92 @@
+body {
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+ul {
+  padding: 0; }
+
+.main-menu {
+  display: flex; }
+
+.nav {
+  width: 50px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  background-color: white;
+  z-index: 10000; }
+  .nav .btn-burger {
+    margin-top: 45vh; }
+
+.navigation {
+  position: fixed;
+  background-color: white;
+  z-index: 9999;
+  width: 100vw; }
+  .navigation::after {
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .navigation.opened::after {
+    animation: fadeIn .4s forwards; }
+  .navigation .menu-slide {
+    background: #fff;
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: none;
+    max-width: 450px; }
+    .navigation .menu-slide .tabs {
+      display: flex;
+      align-items: center;
+      flex-flow: row wrap; }
+      .navigation .menu-slide .tabs li {
+        padding: 0 15px;
+        flex: 1 auto;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 10px;
+        display: relative;
+        line-height: 60px; }
+        .navigation .menu-slide .tabs li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          text-decoration: none; }
+    .navigation .menu-slide .tab_content {
+      overflow: hidden;
+      padding: 20px; }
+      .navigation .menu-slide .tab_content .tabs_item:not(:first-child) {
+        display: none; }
+  .navigation footer {
+    border-top: solid 1px #eee;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 8888;
+    background-color: white; }
+    .navigation footer .social {
+      display: flex;
+      align-items: center;
+      flex-flow: row wrap;
+      text-align: center; }
+      .navigation footer .social a {
+        flex: 1 auto;
+        display: block; }
+        .navigation footer .social a li {
+          padding: 15px; }
+
+@keyframes fadeIn {
+  from {
+    background: transparent; }
+  to {
+    background: rgba(0, 0, 0, 0.5); } }
+
+/*# sourceMappingURL=style.css.map */
